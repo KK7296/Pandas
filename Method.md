@@ -1,19 +1,30 @@
 # `Method`
 
 <table>
+      <tr><th colspan=2><h3>Data Statistics</h3></th><tr/>
       <tr><th><h3>Method</h3></th><th><h3>Description</h3></th></tr>
-      <tr><td><a href=#head><code>DataFrame.head(n)</code></a></td><td>Top n rows of DataFrame</td></tr>
-      <tr><td><a href=#tail><code>DataFrame.tail(n)</code></a></td><td>Bottom n rows of DataFrame</td></tr>
-      <tr><td><a href=#sample><code>DataFrame.sample(n)</code></a></td><td>Random n rows of DataFrame</td></tr>
-      <tr><td><a href=#info><code>DataFrame.info(n)</code></a></td><td>Summary of DataFrame</td></tr>
-      <tr><td><a href=#query><code>DataFrame.query()</code></a></td><td>Filter DataFrame by query conditions</td></tr>
-      <tr><td><a href=#count><code>DataFrame.value_counts()</code></a></td><td>Represents an object containing counts of unique values</td></tr>      
-      <tr><td><a href=#index><code>DataFrame.sort_index()</code></a></td><td>Sort the DataFrame by index</td></tr>
-      <tr><td><a href=#value><code>DataFrame.sort_values()</code></a></td><td>Sort the DataFrame values</td></tr>
-      <tr><td><a href=#set><code>DataFrame.set_index()</code></a></td><td>Set other column as DataFrame index</td></tr>            
-      <tr><td><a href=#reset><code>DataFrame.reset_index()</code></a></td><td>Reset the DataFrame index</td></tr>     
-      <tr><td><a href=#fillna><code>DataFrame.fillna()</code></a></td><td>Fill NaN | missing values in DataFrame</td></tr>     
-      <tr><td><a href=#dropna><code>DataFrame.dropna()</code></a></td><td>Drop rows or columns that contains NaN values</td></tr>     
+      <tr><td><a href=#head><code>head(n)</code></a></td><td>Top n rows of DataFrame</td></tr>
+      <tr><td><a href=#tail><code>tail(n)</code></a></td><td>Bottom n rows of DataFrame</td></tr>
+      <tr><td><a href=#sample><code>sample(n)</code></a></td><td>Random n rows of DataFrame</td></tr>
+      <tr><td><a href=#info><code>info()</code></a></td><td>Summary of DataFrame</td></tr>
+      <tr><td><a href=#describe><code>describe()</code></a></td><td>Statistical description of DataFrame</td></tr>
+      <tr><td><a href=#vcount><code>value_counts()</code></a></td><td>Represents an object containing counts of unique values</td></tr>           
+      <tr><td><a href=#mean><code>mean()</code></a></td><td>Mean of Series or DataFrame</td></tr>
+      <tr><td><a href=#median><code>median()</code></a></td><td>Median of Series or DataFrame</td></tr>
+      <tr><td><a href=#count><code>count()</code></a></td><td>Count Non NA values in Series or DataFrame</td></tr>
+      <tr><td><a href=#std><code>std()</code></a></td><td>Standard Deviation of Series or DataFrame</td></tr>
+      <tr><td><a href=#max><code>max()</code></a></td><td>Max value from the Series or DataFrame</td></tr>
+      <tr><td><a href=#min><code>min()</code></a></td><td>Min value from the Series or DataFrame</td></tr>
+</table>
+
+<table>
+      <tr><th><h3>Method</h3></th><th><h3>Description</h3></th></tr>
+      <tr><td><a href=#index><code>sort_index()</code></a></td><td>Sort the DataFrame by index</td></tr>
+      <tr><td><a href=#value><code>sort_values()</code></a></td><td>Sort the DataFrame values</td></tr>
+      <tr><td><a href=#set><code>set_index()</code></a></td><td>Set other column as DataFrame index</td></tr>            
+      <tr><td><a href=#reset><code>reset_index()</code></a></td><td>Reset the DataFrame index</td></tr>     
+      <tr><td><a href=#fillna><code>fillna()</code></a></td><td>Fill NaN | missing values in DataFrame</td></tr>     
+      <tr><td><a href=#dropna><code>dropna()</code></a></td><td>Drop rows or columns that contains NaN values</td></tr>     
       
 </table>
 
@@ -73,7 +84,7 @@ ITState = ['Hyderabad', 'Bangalore', 'Chennai']
 df.query("Country == 'India' and State in @ITState")
 ```
 
-<h3 name=count><code>Series.value_counts()</code></h3> 
+<h3 name=vcount><code>Series.value_counts()</code></h3> 
 
 ```python
 df['City'].value_counts(normalize=False, sort=True, ascending=False, bins=None, dropna=True)
